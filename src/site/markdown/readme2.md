@@ -1,9 +1,9 @@
-# Simulated Evolution
+# Turmite
 
 Artificial Life Simulation of Bacteria Motion depending on DNA
 
-* [Github Repository](https://github.com/Computer-Kurzweil/simulated-evolution)
-* [Blog](http://thomas-woehlke.blogspot.de/2016/01/simulated-evolution-artificial-life-and.html)
+* [Github Repository](https://github.com/Computer-Kurzweil/turmite)
+* [Maven Project Reports](https://java.woehlke.org/turmite/readme2.html)
 
 ## Abstract
 
@@ -14,8 +14,8 @@ If a cell doesn't eat enough, it will first stand still and after a while it die
 
 ## Run the Desktop Application
 ````
-    git clone https://github.com/Computer-Kurzweil/simulated-evolution.git
-    cd simulated-evolution
+    git clone https://github.com/Computer-Kurzweil/turmite.git
+    cd turmite
     ./mvnw
 ````
 
@@ -29,8 +29,8 @@ If a cell doesn't eat enough, it will first stand still and after a while it die
 ![UML Class Model](img/Class_Model.jpg)
 
 ## Repositories
-* [Github Repository](https://github.com/Computer-Kurzweil/simulated-evolution)
-* [Maven Project Reports](https://java.woehlke.org/simulated-evolution/readme2.html)
+* [Github Repository](https://github.com/Computer-Kurzweil/turmite)
+* [Maven Project Reports](https://java.woehlke.org/turmite/readme2.html)
 
 ## Blog Article
 [http://thomas-woehlke.blogspot.de/2016/01/simulated-evolution-artificial-life-and.html](http://thomas-woehlke.blogspot.de/2016/01/simulated-evolution-artificial-life-and.html)
