@@ -11,31 +11,31 @@
         </RollingFileAppender>
     </Appenders>
     <Loggers>
-        <Logger name="org.woehlke.computer.kurzweil.tabs.cca" level="info" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.tabs.cca" level="info" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Logger name="org.woehlke.computer.kurzweil.tabs.dla" level="warn" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.tabs.dla" level="warn" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Logger name="org.woehlke.computer.kurzweil.tabs.turmite" level="info" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.tabs.turmite" level="info" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Logger name="org.woehlke.computer.kurzweil.tabs.mandelbrot" level="warn" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.tabs.mandelbrot" level="warn" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Logger name="org.woehlke.computer.kurzweil.tabs.randomwalk" level="warn" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.tabs.randomwalk" level="warn" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Logger name="org.woehlke.computer.kurzweil.application" level="info" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.application" level="info" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Logger name="org.woehlke.computer.kurzweil.commons" level="info" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.commons" level="info" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Logger name="org.woehlke.computer.kurzweil.commons.model" level="info" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.commons.model" level="info" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
-        <Logger name="org.woehlke.computer.kurzweil.commons.widgets" level="info" includeLocation="true">
+        <Logger name="org.woehlke.computer.kurzwei.turmite.commons.widgets" level="info" includeLocation="true">
             <AppenderRef ref="Console"/>
         </Logger>
         <Root level="info">
