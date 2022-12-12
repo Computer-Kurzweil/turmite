@@ -1,7 +1,7 @@
 package org.woehlke.computer.kurzweil.tabs.turmite.model;
 
 import lombok.*;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
+import org.woehlke.computer.kurzweil.tabs.turmite.Turmite;
 
 /**
  * &copy; 2006 - 2008 Thomas Woehlke.
@@ -14,7 +14,7 @@ import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-public class SimulatedEvolutionParameter implements SimulatedEvolution {
+public class TurmiteParameter implements Turmite {
 
     private static final long serialVersionUID = 242L;
 

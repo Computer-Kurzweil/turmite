@@ -14,7 +14,7 @@ import org.woehlke.computer.kurzweil.commons.tabs.TabController;
  * Time: 00:36:20
  */
 @Log4j2
-public class SimulatedEvolutionController extends Thread implements Runnable, TabController, SimulatedEvolution {
+public class TurmiteController extends Thread implements Runnable, TabController, Turmite {
 
     private static final long serialVersionUID = 242L;
 
@@ -22,13 +22,13 @@ public class SimulatedEvolutionController extends Thread implements Runnable, Ta
      * Data Model for the Simulation
      */
     @Setter
-    private SimulatedEvolutionModel simulatedEvolutionModel;
+    private TurmiteModel turmiteModel;
 
     /**
      * Canvas, where to paint in the GUI.
      */
     @Setter
-    private SimulatedEvolutionCanvas canvas;
+    private TurmiteCanvas canvas;
 
     /**
      * Time to Wait in ms.
@@ -40,7 +40,7 @@ public class SimulatedEvolutionController extends Thread implements Runnable, Ta
      */
     private Boolean mySemaphore;
 
-    public SimulatedEvolutionController() {
+    public TurmiteController() {
         mySemaphore = Boolean.TRUE;
     }
 
@@ -50,7 +50,7 @@ public class SimulatedEvolutionController extends Thread implements Runnable, Ta
             synchronized (mySemaphore) {
                 doMyJob = mySemaphore.booleanValue();
             }
-            simulatedEvolutionModel.letLivePopulation();
+            turmiteModel.letLivePopulation();
             canvas.repaint();
             try {
                 sleep(TIME_TO_WAIT);

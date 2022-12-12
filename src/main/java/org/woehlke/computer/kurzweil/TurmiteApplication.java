@@ -2,12 +2,12 @@ package org.woehlke.computer.kurzweil;
 
 import lombok.extern.log4j.Log4j2;
 import org.woehlke.computer.kurzweil.application.ComputerKurzweilProperties;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolutionTab;
+import org.woehlke.computer.kurzweil.tabs.turmite.TurmiteTab;
 
 /**
  * Class with main Method for Starting the Desktop Application.
  *
- * @see SimulatedEvolutionTab
+ * @see TurmiteTab
  *
  * &copy; 2006 - 2008 Thomas Woehlke.
  * http://java.woehlke.org/simulated-evolution/
@@ -18,7 +18,7 @@ public class TurmiteApplication {
 
     private TurmiteApplication(String configFileName, String jarFilePath) {
         ComputerKurzweilProperties properties = ComputerKurzweilProperties.propertiesFactory(configFileName, jarFilePath);
-        SimulatedEvolutionTab simulatedEvolutionTab = new SimulatedEvolutionTab(properties);
+        TurmiteTab simulatedEvolutionTab = new TurmiteTab(properties);
     }
 
     /**

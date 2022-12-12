@@ -2,7 +2,7 @@ package org.woehlke.computer.kurzweil.tabs.turmite.model.population;
 
 import lombok.*;
 import lombok.extern.log4j.Log4j2;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
+import org.woehlke.computer.kurzweil.tabs.turmite.Turmite;
 import org.woehlke.computer.kurzweil.tabs.turmite.model.LifeCycleStatus;
 
 /**
@@ -17,7 +17,7 @@ import org.woehlke.computer.kurzweil.tabs.turmite.model.LifeCycleStatus;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class SimulatedEvolutionPopulation implements SimulatedEvolution {
+public class TurmitePopulation implements Turmite {
 
    private static final long serialVersionUID = 242L;
 

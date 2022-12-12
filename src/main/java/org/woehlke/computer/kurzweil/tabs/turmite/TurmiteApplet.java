@@ -28,7 +28,7 @@ import java.io.Serializable;
 @Getter
 @ToString
 @EqualsAndHashCode(callSuper = false)
-public class SimulatedEvolutionApplet extends JApplet implements ImageObserver, MenuContainer, Serializable, Accessible, SimulatedEvolution {
+public class TurmiteApplet extends JApplet implements ImageObserver, MenuContainer, Serializable, Accessible, Turmite {
 
     private static final long serialVersionUID = 242L;
 
@@ -37,17 +37,17 @@ public class SimulatedEvolutionApplet extends JApplet implements ImageObserver, 
     /**
      * ControllerThread for Interachtions between Model and View (MVC-Pattern).
      */
-    private SimulatedEvolutionController simulatedEvolutionController;
+    private TurmiteController simulatedEvolutionController;
 
     /**
      * The View for the World. Food and Cells are painted to the Canvas.
      */
-    private SimulatedEvolutionCanvas canvas;
+    private TurmiteCanvas canvas;
 
     /**
      * Data Model for the Simulation. The World contains the Bacteria Cells and the Food.
      */
-    private SimulatedEvolutionModel simulatedEvolutionModel;
+    private TurmiteModel turmiteModel;
 
     public void init() {
         int scale = 2;
@@ -55,14 +55,14 @@ public class SimulatedEvolutionApplet extends JApplet implements ImageObserver, 
         int height = 234 * scale;
         this.setLayout(new BorderLayout());
         this.add(title, BorderLayout.NORTH);
-        simulatedEvolutionController = new SimulatedEvolutionController();
+        simulatedEvolutionController = new TurmiteController();
         WorldPoint worldDimensions = new WorldPoint(width,height);
-        simulatedEvolutionModel = new SimulatedEvolutionModel(worldDimensions);
-        canvas = new SimulatedEvolutionCanvas(worldDimensions);
-        canvas.setTabModel(simulatedEvolutionModel);
+        turmiteModel = new TurmiteModel(worldDimensions);
+        canvas = new TurmiteCanvas(worldDimensions);
+        canvas.setTabModel(turmiteModel);
         this.add(canvas, BorderLayout.CENTER);
         simulatedEvolutionController.setCanvas(canvas);
-        simulatedEvolutionController.setSimulatedEvolutionModel(simulatedEvolutionModel);
+        simulatedEvolutionController.setTurmiteModel(turmiteModel);
         simulatedEvolutionController.start();
     }
 

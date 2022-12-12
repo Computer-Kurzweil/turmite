@@ -7,7 +7,7 @@ import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
 import org.woehlke.computer.kurzweil.commons.tabs.TabModel;
 import org.woehlke.computer.kurzweil.tabs.turmite.model.Cell;
-import org.woehlke.computer.kurzweil.tabs.turmite.model.SimulatedEvolutionParameter;
+import org.woehlke.computer.kurzweil.tabs.turmite.model.TurmiteParameter;
 import org.woehlke.computer.kurzweil.tabs.turmite.model.SimulatedEvolutionWorldLattice;
 import org.woehlke.computer.kurzweil.tabs.turmite.model.WorldPoint;
 
@@ -34,7 +34,7 @@ import java.util.Random;
 @Log4j2
 @ToString(exclude = {"random"})
 @EqualsAndHashCode(exclude = {"random"})
-public class SimulatedEvolutionModel implements Serializable, TabModel {
+public class TurmiteModel implements Serializable, TabModel {
 
     static final long serialVersionUID = 242L;
 
@@ -67,15 +67,15 @@ public class SimulatedEvolutionModel implements Serializable, TabModel {
     //private SimulatedEvolutionPopulationContainer simulatedEvolutionPopulationContainer;
 
     @Getter
-    private SimulatedEvolutionParameter simulatedEvolutionParameter;
+    private TurmiteParameter simulatedEvolutionParameter;
 
-    public SimulatedEvolutionModel(WorldPoint worldDimensions) {
+    public TurmiteModel(WorldPoint worldDimensions) {
         long seed = new Date().getTime();
         random = new Random(seed);
         this.worldDimensions = worldDimensions;
         simulatedEvolutionWorldLattice = new SimulatedEvolutionWorldLattice(this.worldDimensions,random);
         createPopulation();
-        simulatedEvolutionParameter = new SimulatedEvolutionParameter();
+        simulatedEvolutionParameter = new TurmiteParameter();
         //simulatedEvolutionPopulationContainer = new SimulatedEvolutionPopulationContainer(tabCtx);
     }
 

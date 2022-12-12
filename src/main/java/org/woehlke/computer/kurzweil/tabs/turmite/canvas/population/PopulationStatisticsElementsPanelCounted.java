@@ -10,9 +10,9 @@ import org.woehlke.computer.kurzweil.commons.Updateable;
 import org.woehlke.computer.kurzweil.commons.layouts.FlowLayoutCenter;
 import org.woehlke.computer.kurzweil.commons.widgets.SubTab;
 import org.woehlke.computer.kurzweil.commons.widgets.SubTabImpl;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolutionContext;
-import org.woehlke.computer.kurzweil.tabs.turmite.model.population.SimulatedEvolutionPopulation;
+import org.woehlke.computer.kurzweil.tabs.turmite.Turmite;
+import org.woehlke.computer.kurzweil.tabs.turmite.TurmiteContext;
+import org.woehlke.computer.kurzweil.tabs.turmite.model.population.TurmitePopulation;
 
 import javax.swing.border.CompoundBorder;
 import java.awt.*;
@@ -29,7 +29,7 @@ import static org.woehlke.computer.kurzweil.tabs.turmite.model.LifeCycleStatus.P
 @Getter
 @ToString(callSuper = true,exclude = {"tabCtx","border","layout","layoutSubPanel"})
 @EqualsAndHashCode(callSuper=true,exclude = {"tabCtx","border","layout","layoutSubPanel"})
-public class PopulationStatisticsElementsPanelCounted extends SubTabImpl implements SimulatedEvolution, SubTab, Updateable {
+public class PopulationStatisticsElementsPanelCounted extends SubTabImpl implements Turmite, SubTab, Updateable {
 
     private static final long serialVersionUID = 242L;
 
@@ -43,15 +43,15 @@ public class PopulationStatisticsElementsPanelCounted extends SubTabImpl impleme
     private final String generationOldestLabel;
     private final String generationYoungestLabel;
 
-    private final SimulatedEvolutionContext tabCtx;
+    private final TurmiteContext tabCtx;
     private final CompoundBorder border;
     private final FlowLayoutCenter layout;
     private final FlowLayout layoutSubPanel;
 
-    private SimulatedEvolutionPopulation population;
+    private TurmitePopulation population;
 
     public PopulationStatisticsElementsPanelCounted(
-        SimulatedEvolutionContext tabCtx
+        TurmiteContext tabCtx
     ) {
         super(tabCtx.getCtx().getProperties().getSimulatedevolution().getPopulation().getPanelPopulationStatistics(),tabCtx.getCtx().getProperties());
         this.tabCtx = tabCtx;

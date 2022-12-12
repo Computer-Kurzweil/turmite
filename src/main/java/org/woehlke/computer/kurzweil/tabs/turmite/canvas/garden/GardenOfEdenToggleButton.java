@@ -3,8 +3,8 @@ package org.woehlke.computer.kurzweil.tabs.turmite.canvas.garden;
 import lombok.Getter;
 import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolutionContext;
+import org.woehlke.computer.kurzweil.tabs.turmite.Turmite;
+import org.woehlke.computer.kurzweil.tabs.turmite.TurmiteContext;
 
 import javax.swing.*;
 
@@ -16,15 +16,15 @@ import javax.swing.*;
 @Log4j2
 @Getter
 @ToString(callSuper = true)
-public class GardenOfEdenToggleButton extends JToggleButton implements SimulatedEvolution {
+public class GardenOfEdenToggleButton extends JToggleButton implements Turmite {
 
     private static final long serialVersionUID = 242L;
 
     @ToString.Exclude
-    private final SimulatedEvolutionContext tabCtx;
+    private final TurmiteContext tabCtx;
     private final String buttonToggleGardenOfEdenString;
 
-    public GardenOfEdenToggleButton(SimulatedEvolutionContext tabCtx) {
+    public GardenOfEdenToggleButton(TurmiteContext tabCtx) {
         super(tabCtx.getCtx().getProperties().getSimulatedevolution().getGardenOfEden().getGardenOfEdenEnabledToggleButton());
         this.tabCtx = tabCtx;
         this.buttonToggleGardenOfEdenString = this.tabCtx.getCtx().getProperties().getSimulatedevolution().getGardenOfEden().getGardenOfEdenEnabledToggleButton();

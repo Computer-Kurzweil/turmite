@@ -7,9 +7,9 @@ import org.woehlke.computer.kurzweil.commons.Updateable;
 import org.woehlke.computer.kurzweil.commons.widgets.SubTab;
 import org.woehlke.computer.kurzweil.commons.widgets.SubTabImpl;
 import org.woehlke.computer.kurzweil.tabs.TabPanel;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolutionContext;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolutionModel;
+import org.woehlke.computer.kurzweil.tabs.turmite.Turmite;
+import org.woehlke.computer.kurzweil.tabs.turmite.TurmiteContext;
+import org.woehlke.computer.kurzweil.tabs.turmite.TurmiteModel;
 
 /**
  * &copy; 2006 - 2008 Thomas Woehlke.
@@ -19,19 +19,19 @@ import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolutionModel;
 @Log4j2
 @Getter
 @ToString(callSuper = true)
-public class GardenOfEdenPanelRow extends SubTabImpl implements SimulatedEvolution, Updateable, SubTab {
+public class GardenOfEdenPanelRow extends SubTabImpl implements Turmite, Updateable, SubTab {
 
     private static final long serialVersionUID = 242L;
 
     @ToString.Exclude
-    private final SimulatedEvolutionContext tabCtx;
+    private final TurmiteContext tabCtx;
     @ToString.Exclude
-    private final SimulatedEvolutionModel tabModel;
+    private final TurmiteModel tabModel;
     private final GardenOfEdenCheckBox gardenOfEdenEnabled;
     private final GardenOfEdenToggleButton buttonToggleGardenOfEden;
     //private final GardenOfEdenPanel gardenOfEdenPanel;
 
-    public GardenOfEdenPanelRow(SimulatedEvolutionContext tabCtx) {
+    public GardenOfEdenPanelRow(TurmiteContext tabCtx) {
         super("Garden of Eden",tabCtx.getCtx().getProperties());
         this.tabCtx = tabCtx;
         this.tabModel = this.tabCtx.getTabModel();

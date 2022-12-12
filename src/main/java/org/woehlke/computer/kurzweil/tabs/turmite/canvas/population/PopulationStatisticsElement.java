@@ -3,7 +3,7 @@ package org.woehlke.computer.kurzweil.tabs.turmite.canvas.population;
 import lombok.Getter;
 import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
+import org.woehlke.computer.kurzweil.tabs.turmite.Turmite;
 import org.woehlke.computer.kurzweil.tabs.turmite.model.LifeCycleStatus;
 
 import javax.swing.*;
@@ -16,7 +16,7 @@ import javax.swing.*;
 @Log4j2
 @Getter
 @ToString(callSuper = true)
-public class PopulationStatisticsElement extends JPanel implements SimulatedEvolution {
+public class PopulationStatisticsElement extends JPanel implements Turmite {
 
     private static final long serialVersionUID = 242L;
 

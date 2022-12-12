@@ -4,8 +4,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolutionContext;
+import org.woehlke.computer.kurzweil.tabs.turmite.Turmite;
+import org.woehlke.computer.kurzweil.tabs.turmite.TurmiteContext;
 import org.woehlke.computer.kurzweil.tabs.turmite.model.Cell;
 import org.woehlke.computer.kurzweil.tabs.turmite.model.WorldPoint;
 
@@ -24,19 +24,19 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 @Getter
 @ToString(callSuper = true, exclude={"tabCtx","statistics","cells"})
 @EqualsAndHashCode(exclude={"tabCtx","statistics","cells"})
-public class SimulatedEvolutionPopulationContainer implements SimulatedEvolution {
+public class TurmitePopulationContainer implements Turmite {
 
     private static final long serialVersionUID = 242L;
 
-    private final SimulatedEvolutionContext tabCtx;
+    private final TurmiteContext tabCtx;
     private final int initialPopulation;
-    private final ConcurrentLinkedQueue<SimulatedEvolutionPopulation> statistics = new ConcurrentLinkedQueue<>();
+    private final ConcurrentLinkedQueue<TurmitePopulation> statistics = new ConcurrentLinkedQueue<>();
     private final List<Cell> cells;
     private long worldIteration;
     private final int queueMaxLength;
 
-    public SimulatedEvolutionPopulationContainer(
-        SimulatedEvolutionContext tabCtx
+    public TurmitePopulationContainer(
+        TurmiteContext tabCtx
     ) {
         this.tabCtx = tabCtx;
         worldIteration = 0L;
@@ -57,7 +57,7 @@ public class SimulatedEvolutionPopulationContainer implements SimulatedEvolution
         }
     }
 
-    public void push(SimulatedEvolutionPopulation populationCensus) {
+    public void push(TurmitePopulation populationCensus) {
         worldIteration++;
         populationCensus.setWorldIteration(worldIteration);
         statistics.add(populationCensus);
@@ -67,11 +67,11 @@ public class SimulatedEvolutionPopulationContainer implements SimulatedEvolution
         log.info(worldIteration + " : " + populationCensus);
     }
 
-    public SimulatedEvolutionPopulation getCurrentGeneration() {
-        SimulatedEvolutionPopulation currentGeneration = statistics.peek();
+    public TurmitePopulation getCurrentGeneration() {
+        TurmitePopulation currentGeneration = statistics.peek();
         if(currentGeneration == null){
             log.info(worldIteration + "statistics.peek() == null ");
-            currentGeneration = new SimulatedEvolutionPopulation();
+            currentGeneration = new TurmitePopulation();
         }
         return currentGeneration;
     }

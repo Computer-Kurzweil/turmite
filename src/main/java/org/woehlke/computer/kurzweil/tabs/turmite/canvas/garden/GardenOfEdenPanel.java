@@ -3,8 +3,8 @@ package org.woehlke.computer.kurzweil.tabs.turmite.canvas.garden;
 import lombok.Getter;
 import lombok.ToString;
 import lombok.extern.log4j.Log4j2;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolution;
-import org.woehlke.computer.kurzweil.tabs.turmite.SimulatedEvolutionContext;
+import org.woehlke.computer.kurzweil.tabs.turmite.Turmite;
+import org.woehlke.computer.kurzweil.tabs.turmite.TurmiteContext;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,16 +17,16 @@ import java.awt.*;
 @Log4j2
 @Getter
 @ToString(callSuper = true)
-public class GardenOfEdenPanel extends JPanel implements SimulatedEvolution {
+public class GardenOfEdenPanel extends JPanel implements Turmite {
 
     private static final long serialVersionUID = 242L;
 
     @ToString.Exclude
-    private final SimulatedEvolutionContext tabCtx;
+    private final TurmiteContext tabCtx;
     private final String gardenOfEdenPanelBorderLabel;
     //private final CompoundBorder gardenOfEdenPanelBorder;
 
-    public GardenOfEdenPanel(SimulatedEvolutionContext tabCtx) {
+    public GardenOfEdenPanel(TurmiteContext tabCtx) {
         super(new FlowLayout());
         this.tabCtx=tabCtx;
         this.gardenOfEdenPanelBorderLabel = tabCtx.getCtx().getProperties().getSimulatedevolution().getGardenOfEden().getPanelGardenOfEden();

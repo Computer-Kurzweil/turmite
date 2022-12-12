@@ -23,7 +23,7 @@ import java.util.List;
  */
 @Log4j2
 @Getter
-public class SimulatedEvolutionCanvas extends JComponent implements TabCanvas, SimulatedEvolution {
+public class TurmiteCanvas extends JComponent implements TabCanvas, Turmite {
 
     static final long serialVersionUID = 242L;
 
@@ -31,14 +31,14 @@ public class SimulatedEvolutionCanvas extends JComponent implements TabCanvas, S
      * Reference to the Data Model.
      */
     @Setter
-    private SimulatedEvolutionModel tabModel;
+    private TurmiteModel tabModel;
 
     private WorldPoint worldDimensions;
 
     private final Color WATER = Color.BLACK;
     private final Color FOOD = Color.GREEN;
 
-    public SimulatedEvolutionCanvas(WorldPoint worldDimensions) {
+    public TurmiteCanvas(WorldPoint worldDimensions) {
         this.worldDimensions = worldDimensions;
         this.setBackground(WATER);
         this.setSize(this.worldDimensions.getX(), this.worldDimensions.getY());

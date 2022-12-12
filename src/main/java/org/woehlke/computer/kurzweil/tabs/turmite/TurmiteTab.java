@@ -5,7 +5,7 @@ import lombok.extern.log4j.Log4j2;
 import org.woehlke.computer.kurzweil.application.ComputerKurzweilContext;
 import org.woehlke.computer.kurzweil.application.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.tabs.Tab;
-import org.woehlke.computer.kurzweil.tabs.turmite.model.SimulatedEvolutionParameter;
+import org.woehlke.computer.kurzweil.tabs.turmite.model.TurmiteParameter;
 
 import javax.swing.*;
 import java.awt.*;
@@ -16,7 +16,7 @@ import java.awt.event.WindowListener;
 /**
  * This Frame wraps the SimulatedEvolutionApplet which is the Container for this Simulution.
  *
- * @see SimulatedEvolutionApplet
+ * @see TurmiteApplet
  * @see javax.swing.JFrame
  * @see java.awt.image.ImageObserver
  * @see java.awt.event.WindowListener
@@ -29,10 +29,10 @@ import java.awt.event.WindowListener;
  */
 @Log4j2
 @Getter
-public class SimulatedEvolutionTab extends JFrame implements
+public class TurmiteTab extends JFrame implements
         MenuContainer,
         WindowListener,
-        SimulatedEvolution,
+    Turmite,
         Tab {
 
     static final long serialVersionUID = 242L;
@@ -49,13 +49,13 @@ public class SimulatedEvolutionTab extends JFrame implements
 
     private final static int START_POSITION_ON_SCREEN_Y = 100;
 
-    private SimulatedEvolutionApplet simulatedEvolutionApplet;
+    private TurmiteApplet simulatedEvolutionApplet;
 
-    private final SimulatedEvolutionParameter simulatedEvolutionParameter;
+    private final TurmiteParameter simulatedEvolutionParameter;
 
     private final ComputerKurzweilContext ctx;
 
-    private final SimulatedEvolutionContext tabCtx;
+    private final TurmiteContext tabCtx;
 
     private final ComputerKurzweilProperties properties;
 
@@ -67,15 +67,15 @@ public class SimulatedEvolutionTab extends JFrame implements
         setBounds(x, y, width, height);
     }
 
-    public SimulatedEvolutionTab(ComputerKurzweilProperties properties) {
+    public TurmiteTab(ComputerKurzweilProperties properties) {
         super(TITLE);
         this.properties = properties;
-        simulatedEvolutionParameter = new SimulatedEvolutionParameter();
-        simulatedEvolutionApplet = new SimulatedEvolutionApplet();
+        simulatedEvolutionParameter = new TurmiteParameter();
+        simulatedEvolutionApplet = new TurmiteApplet();
         simulatedEvolutionApplet.init();
         add(APPLET_POSITION, simulatedEvolutionApplet);
         this.ctx = new ComputerKurzweilContext(properties);
-        this.tabCtx = new SimulatedEvolutionContext(this,ctx);
+        this.tabCtx = new TurmiteContext(this,ctx);
         pack();
         setVisible(true);
         toFront();
