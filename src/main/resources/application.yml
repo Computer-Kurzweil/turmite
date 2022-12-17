@@ -156,7 +156,7 @@ tetris:
 turmite:
   view:
     title: 'Turmite'
-    subtitle: 'Termites as Turing Machines with 2D Tape'
+    subtitle: 'Turmites as Turing Machines with 2D Tape'
     copyright: '(c) 2022 Thomas Woehlke'
     width: 400
     height: 292
