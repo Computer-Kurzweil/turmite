@@ -4,7 +4,7 @@
 
     <groupId>org.woehlke.computer.kurzweil</groupId>
     <artifactId>turmite</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>Turmite</name>
@@ -16,7 +16,7 @@
         <url>https://github.com/Computer-Kurzweil/turmite.git</url>
         <connection>scm:git:git@github.com:Computer-Kurzweil/turmite.git</connection>
         <developerConnection>scm:git:git@github.com:Computer-Kurzweil/turmite.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>turmite-1.0.0</tag>
     </scm>
 
     <issueManagement>
