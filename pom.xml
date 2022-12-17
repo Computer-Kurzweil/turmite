@@ -1022,7 +1022,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>org.woehlke.computer.kurzwei.turmite.TurmiteApplication</mainClass>
+                    <mainClass>org.woehlke.computer.kurzweil.turmite.TurmiteApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>

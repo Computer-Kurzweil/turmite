@@ -135,12 +135,14 @@ sierpinskitriangle:
   view:
     title: 'Sierpinski Triangle'
     subtitle: 'Fractal Sierpinski Triangle'
-    copyright: '(c) 2022 Thomas Woehlke'
-    width: 400
-    height: 292
-    scale: 3
+    neighborhood:
+      title: 'Neighborhood'
+      typeVonNeumann: 'Von Neumann'
+      typeMoore: 'Moore'
+      typeWoehlke: 'Woehlke'
   control:
     threadSleepTime: 50
+    numberOfParticles: 30000
 tetris:
   view:
     title: 'Tetris'
