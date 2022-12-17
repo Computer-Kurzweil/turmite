@@ -14,7 +14,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.ImageObserver;
-import java.io.Serial;
 import java.io.Serializable;
 
 /**
@@ -48,8 +47,7 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
         WindowListener,
         MouseListener {
 
-    @Serial
-    private final static long serialVersionUID = 242L;
+     final static long serialVersionUID = 242L;
 
     private final PanelSubtitle panelSubtitle;
     private final PanelCopyright panelCopyright;

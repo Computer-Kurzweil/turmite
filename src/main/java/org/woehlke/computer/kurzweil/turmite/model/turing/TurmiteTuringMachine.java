@@ -19,13 +19,13 @@ import org.woehlke.computer.kurzweil.turmite.model.fractal.GaussianNumberPlane;
  * Date: 28.08.13
  * Time: 12:39
  */
-public class SierpinksiTriangleTuringMachine {
+public class TurmiteTuringMachine {
 
     private volatile GaussianNumberPlane gaussianNumberPlane;
     private volatile TuringPositions turingPositions;
     private volatile TuringPhaseState turingPhaseState;
 
-    public SierpinksiTriangleTuringMachine(ApplicationModel model) {
+    public TurmiteTuringMachine(ApplicationModel model) {
         this.gaussianNumberPlane = model.getGaussianNumberPlane();
         this.turingPhaseState = new TuringPhaseState();
         this.turingPositions = new TuringPositions(model.getWorldDimensions());

@@ -5,7 +5,7 @@ import org.woehlke.computer.kurzweil.turmite.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.turmite.model.fractal.GaussianNumberPlane;
 import org.woehlke.computer.kurzweil.turmite.model.common.Point;
 import org.woehlke.computer.kurzweil.turmite.view.state.ApplicationStateMachine;
-import org.woehlke.computer.kurzweil.turmite.model.turing.SierpinksiTriangleTuringMachine;
+import org.woehlke.computer.kurzweil.turmite.model.turing.TurmiteTuringMachine;
 import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
 
 /**
@@ -18,7 +18,7 @@ import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
  * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
  *
  * @see GaussianNumberPlane
- * @see SierpinksiTriangleTuringMachine
+ * @see TurmiteTuringMachine
  * @see ApplicationStateMachine
  *
  * @see ComputerKurzweilProperties
@@ -30,7 +30,7 @@ import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
 public class ApplicationModel {
 
     private volatile GaussianNumberPlane gaussianNumberPlane;
-    private volatile SierpinksiTriangleTuringMachine sierpinksiTriangleTuringMachine;
+    private volatile TurmiteTuringMachine turmiteTuringMachine;
     private volatile ApplicationStateMachine applicationStateMachine;
 
     private volatile ComputerKurzweilProperties config;
@@ -40,7 +40,7 @@ public class ApplicationModel {
         this.config = config;
         this.frame = frame;
         this.gaussianNumberPlane = new GaussianNumberPlane(this);
-        this.sierpinksiTriangleTuringMachine = new SierpinksiTriangleTuringMachine(this);
+        this.turmiteTuringMachine = new TurmiteTuringMachine(this);
         this.applicationStateMachine = new ApplicationStateMachine();
     }
 
@@ -49,7 +49,7 @@ public class ApplicationModel {
         boolean repaint = true;
         switch (applicationStateMachine.getApplicationState()) {
             case MANDELBROT:
-                sierpinksiTriangleTuringMachine.start();
+                turmiteTuringMachine.start();
                 repaint = false;
                 break;
             case JULIA_SET:
@@ -63,7 +63,7 @@ public class ApplicationModel {
         boolean repaint = false;
         switch (applicationStateMachine.getApplicationState()) {
             case MANDELBROT:
-                repaint = sierpinksiTriangleTuringMachine.step();
+                repaint = turmiteTuringMachine.step();
                 break;
             case JULIA_SET:
                 break;
