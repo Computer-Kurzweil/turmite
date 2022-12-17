@@ -157,14 +157,12 @@ turmite:
   view:
     title: 'Turmite'
     subtitle: 'Termites as Turing Machines with 2D Tape'
-    neighborhood:
-      title: 'Neighborhood'
-      typeVonNeumann: 'Von Neumann'
-      typeMoore: 'Moore'
-      typeWoehlke: 'Woehlke'
+    copyright: '(c) 2022 Thomas Woehlke'
+    width: 400
+    height: 292
+    scale: 3
   control:
     threadSleepTime: 50
-    numberOfParticles: 30000
 wator:
   view:
     title: 'WaTor'

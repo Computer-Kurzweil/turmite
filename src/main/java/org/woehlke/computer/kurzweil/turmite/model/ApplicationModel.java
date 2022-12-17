@@ -76,9 +76,9 @@ public class ApplicationModel {
     }
 
     public Point getWorldDimensions() {
-        int scale = config.getSierpinskitriangle().getView().getScale();
-        int width = scale * config.getSierpinskitriangle().getView().getWidth();
-        int height = scale * config.getSierpinskitriangle().getView().getHeight();
+        int scale = config.getTurmite().getView().getScale();
+        int width = scale * config.getTurmite().getView().getWidth();
+        int height = scale * config.getTurmite().getView().getHeight();
         return new Point(width, height);
     }
 
