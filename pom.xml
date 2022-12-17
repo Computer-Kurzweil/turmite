@@ -9,7 +9,7 @@
 
     <name>Turmite</name>
     <description>Artificial Life Simulation of Bacteria Motion depending on DNA</description>
-    <url>https://github.com/Computer-Kurzweil/turmite</url>
+    <url>https://java.woehlke.org/turmite/</url>
     <inceptionYear>2013</inceptionYear>
 
     <scm>
