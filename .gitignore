@@ -7,5 +7,10 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+# usage-without-binary-jar: https://maven.apache.org/wrapper/
 .mvn/wrapper/maven-wrapper.jar
+
+.idea
+*iml
+*.xcf
+*.gif
