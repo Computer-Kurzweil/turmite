@@ -13,9 +13,9 @@
     <inceptionYear>2013</inceptionYear>
 
     <scm>
-        <url>https://github.com/Computer-Kurzweil/turmite.git</url>
         <connection>scm:git:git@github.com:Computer-Kurzweil/turmite.git</connection>
         <developerConnection>scm:git:git@github.com:Computer-Kurzweil/turmite.git</developerConnection>
+        <url>https://github.com/Computer-Kurzweil/turmite/tree/${project.scm.tag}</url>
         <tag>HEAD</tag>
     </scm>
 
