@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>turmite</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Turmite</name>
@@ -21,7 +21,7 @@
         <connection>scm:git:git@github.com:Computer-Kurzweil/turmite.git</connection>
         <developerConnection>scm:git:git@github.com:Computer-Kurzweil/turmite.git</developerConnection>
         <url>https://github.com/Computer-Kurzweil/turmite/tree/${project.scm.tag}</url>
-        <tag>turmite-1.0.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>
