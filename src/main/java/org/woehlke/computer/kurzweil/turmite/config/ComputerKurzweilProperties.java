@@ -790,6 +790,14 @@ public class ComputerKurzweilProperties implements Serializable {
             @NotBlank
             private Integer scale;
 
+            @NotBlank
+            private String buttonsRunA;
+
+            @NotBlank
+            private String buttonsRunB;
+
+            @NotBlank
+            private String buttonsRunC;
         }
 
         @ToString

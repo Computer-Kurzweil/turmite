@@ -43,6 +43,9 @@ simulatedevolution:
     width: 320
     height: 234
     scale: 3
+    buttonsRunA: "run A"
+    buttonsRunB: "run B"
+    buttonsRunC: "run C"
   control:
     threadSleepTime: 100
     exitStatus: 0

@@ -86,4 +86,15 @@ public class ApplicationModel {
         return gaussianNumberPlane;
     }
 
+    public void runA() {
+        System.out.println("runA");
+    }
+
+    public void runB() {
+        System.out.println("runB");
+    }
+
+    public void runC() {
+        System.out.println("runC");
+    }
 }

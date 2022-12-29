@@ -6,6 +6,7 @@ import org.woehlke.computer.kurzweil.turmite.control.ControllerThread;
 import org.woehlke.computer.kurzweil.turmite.model.ApplicationModel;
 import org.woehlke.computer.kurzweil.turmite.model.common.Point;
 import org.woehlke.computer.kurzweil.turmite.view.canvas.ApplicationCanvas;
+import org.woehlke.computer.kurzweil.turmite.view.labels.PanelButtons;
 import org.woehlke.computer.kurzweil.turmite.view.labels.PanelCopyright;
 import org.woehlke.computer.kurzweil.turmite.view.labels.PanelSubtitle;
 
@@ -50,7 +51,7 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
      final static long serialVersionUID = 242L;
 
     private final PanelSubtitle panelSubtitle;
-    private final PanelCopyright panelCopyright;
+    private final PanelButtons panelButtons;
 
     private volatile ControllerThread controller;
     private volatile ApplicationCanvas canvas;
@@ -63,13 +64,13 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
         this.model = new ApplicationModel(config,this);
         this.canvas = new ApplicationCanvas(model);
         this.controller = new ControllerThread(model, this);
-        this. panelSubtitle = new PanelSubtitle(config.getTurmite().getView().getSubtitle());
-        this.panelCopyright = new PanelCopyright(config.getTurmite().getView().getCopyright());
+        this.panelSubtitle = new PanelSubtitle(config.getTurmite().getView().getSubtitle());
+        this.panelButtons = new PanelButtons(this.model, this, config);
         BoxLayout layout = new BoxLayout(rootPane, BoxLayout.PAGE_AXIS);
         rootPane.setLayout(layout);
         rootPane.add(panelSubtitle);
         rootPane.add(canvas);
-        rootPane.add(panelCopyright);
+        rootPane.add(panelButtons);
         this.addWindowListener(this);
         this.canvas.addMouseListener(   this);
         this.showMeInit();
