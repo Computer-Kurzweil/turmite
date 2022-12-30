@@ -3,9 +3,9 @@ package org.woehlke.computer.kurzweil.turmite.view;
 import lombok.extern.slf4j.Slf4j;
 import org.woehlke.computer.kurzweil.turmite.config.ComputerKurzweilProperties;
 import org.woehlke.computer.kurzweil.turmite.control.ControllerThread;
-import org.woehlke.computer.kurzweil.turmite.model.ApplicationModel;
+import org.woehlke.computer.kurzweil.turmite.model.TurmiteModel;
 import org.woehlke.computer.kurzweil.turmite.model.common.Point;
-import org.woehlke.computer.kurzweil.turmite.view.canvas.ApplicationCanvas;
+import org.woehlke.computer.kurzweil.turmite.view.canvas.TurmiteCanvas;
 import org.woehlke.computer.kurzweil.turmite.view.labels.PanelButtons;
 import org.woehlke.computer.kurzweil.turmite.view.labels.PanelCopyright;
 import org.woehlke.computer.kurzweil.turmite.view.labels.PanelSubtitle;
@@ -23,8 +23,8 @@ import java.io.Serializable;
  * @author Thomas Woehlke
  *
  * @see ControllerThread
- * @see ApplicationCanvas
- * @see ApplicationModel
+ * @see TurmiteCanvas
+ * @see TurmiteModel
  * @see PanelSubtitle
  * @see PanelCopyright
  *
@@ -41,7 +41,7 @@ import java.io.Serializable;
  * Time: 18:47:46
  */
 @Slf4j
-public class ApplicationFrame extends JFrame implements ImageObserver,
+public class TurmiteFrame extends JFrame implements ImageObserver,
         MenuContainer,
         Serializable,
         Accessible,
@@ -54,15 +54,15 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
     private final PanelButtons panelButtons;
 
     private volatile ControllerThread controller;
-    private volatile ApplicationCanvas canvas;
-    private volatile ApplicationModel model;
+    private volatile TurmiteCanvas canvas;
+    private volatile TurmiteModel model;
     private volatile Rectangle rectangleBounds;
     private volatile Dimension dimensionSize;
 
-    public ApplicationFrame(ComputerKurzweilProperties config) {
+    public TurmiteFrame(ComputerKurzweilProperties config) {
         super(config.getTurmite().getView().getTitle());
-        this.model = new ApplicationModel(config,this);
-        this.canvas = new ApplicationCanvas(model);
+        this.model = new TurmiteModel(config,this);
+        this.canvas = new TurmiteCanvas(model);
         this.controller = new ControllerThread(model, this);
         this.panelSubtitle = new PanelSubtitle(config.getTurmite().getView().getSubtitle());
         this.panelButtons = new PanelButtons(this.model, this, config);
@@ -162,7 +162,7 @@ public class ApplicationFrame extends JFrame implements ImageObserver,
         canvas.setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
     }
 
-    public ApplicationCanvas getCanvas() {
+    public TurmiteCanvas getCanvas() {
         return canvas;
     }
 

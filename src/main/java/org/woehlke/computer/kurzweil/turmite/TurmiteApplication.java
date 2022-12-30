@@ -1,7 +1,7 @@
 package org.woehlke.computer.kurzweil.turmite;
 
 import org.woehlke.computer.kurzweil.turmite.config.ComputerKurzweilProperties;
-import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
+import org.woehlke.computer.kurzweil.turmite.view.TurmiteFrame;
 
 /**
  * Mandelbrot Set drawn by a Turing Machine.
@@ -9,7 +9,7 @@ import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
  * (C) 2006 - 2022 Thomas Woehlke.
  * @author Thomas Woehlke
  *
- * @see ApplicationFrame
+ * @see TurmiteFrame
  * @see ComputerKurzweilProperties
  *
  * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
@@ -21,7 +21,7 @@ public class TurmiteApplication {
         String conf = "application.yml";
         String jarPath = "target/turmite.jar";
         ComputerKurzweilProperties config = ComputerKurzweilProperties.propertiesFactory(conf,jarPath);
-        ApplicationFrame frame = new ApplicationFrame(config);
+        TurmiteFrame frame = new TurmiteFrame(config);
         frame.start();
     }
 

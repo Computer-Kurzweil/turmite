@@ -1,6 +1,6 @@
 package org.woehlke.computer.kurzweil.turmite.model.turing;
 
-import org.woehlke.computer.kurzweil.turmite.model.ApplicationModel;
+import org.woehlke.computer.kurzweil.turmite.model.TurmiteModel;
 import org.woehlke.computer.kurzweil.turmite.model.fractal.GaussianNumberPlane;
 
 /**
@@ -25,7 +25,7 @@ public class TurmiteTuringMachine {
     private volatile TuringPositions turingPositions;
     private volatile TuringPhaseState turingPhaseState;
 
-    public TurmiteTuringMachine(ApplicationModel model) {
+    public TurmiteTuringMachine(TurmiteModel model) {
         this.gaussianNumberPlane = model.getGaussianNumberPlane();
         this.turingPhaseState = new TuringPhaseState();
         this.turingPositions = new TuringPositions(model.getWorldDimensions());

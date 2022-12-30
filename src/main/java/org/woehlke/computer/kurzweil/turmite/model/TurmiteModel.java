@@ -6,7 +6,7 @@ import org.woehlke.computer.kurzweil.turmite.model.fractal.GaussianNumberPlane;
 import org.woehlke.computer.kurzweil.turmite.model.common.Point;
 import org.woehlke.computer.kurzweil.turmite.view.state.ApplicationStateMachine;
 import org.woehlke.computer.kurzweil.turmite.model.turing.TurmiteTuringMachine;
-import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
+import org.woehlke.computer.kurzweil.turmite.view.TurmiteFrame;
 
 /**
  * Mandelbrot Set drawn by a Turing Machine.
@@ -22,21 +22,21 @@ import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
  * @see ApplicationStateMachine
  *
  * @see ComputerKurzweilProperties
- * @see ApplicationFrame
+ * @see TurmiteFrame
  *
  * Created by tw on 16.12.2019.
  */
 @Slf4j
-public class ApplicationModel {
+public class TurmiteModel {
 
     private volatile GaussianNumberPlane gaussianNumberPlane;
     private volatile TurmiteTuringMachine turmiteTuringMachine;
     private volatile ApplicationStateMachine applicationStateMachine;
 
     private volatile ComputerKurzweilProperties config;
-    private volatile ApplicationFrame frame;
+    private volatile TurmiteFrame frame;
 
-    public ApplicationModel(ComputerKurzweilProperties config, ApplicationFrame frame) {
+    public TurmiteModel(ComputerKurzweilProperties config, TurmiteFrame frame) {
         this.config = config;
         this.frame = frame;
         this.gaussianNumberPlane = new GaussianNumberPlane(this);

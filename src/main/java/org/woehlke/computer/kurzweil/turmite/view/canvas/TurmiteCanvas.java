@@ -1,7 +1,7 @@
 package org.woehlke.computer.kurzweil.turmite.view.canvas;
 
 
-import org.woehlke.computer.kurzweil.turmite.model.ApplicationModel;
+import org.woehlke.computer.kurzweil.turmite.model.TurmiteModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,7 +17,7 @@ import java.io.Serial;
  * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
  * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
  *
- * @see ApplicationModel
+ * @see TurmiteModel
  * @see Dimension
  *
  * @see JComponent
@@ -26,15 +26,15 @@ import java.io.Serial;
  * Date: 05.02.2006
  * Time: 00:51:51
  */
-public class ApplicationCanvas extends JComponent {
+public class TurmiteCanvas extends JComponent {
 
     @Serial
     private final static long serialVersionUID = 242L;
 
-    private volatile ApplicationModel app;
+    private volatile TurmiteModel app;
     private volatile Dimension preferredSize;
 
-    public ApplicationCanvas(ApplicationModel app) {
+    public TurmiteCanvas(TurmiteModel app) {
         this.app = app;
         int width = this.app.getWorldDimensions().getWidth();
         int height = this.app.getWorldDimensions().getHeight();

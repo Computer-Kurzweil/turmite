@@ -1,8 +1,8 @@
 package org.woehlke.computer.kurzweil.turmite.view.labels;
 
 import org.woehlke.computer.kurzweil.turmite.config.ComputerKurzweilProperties;
-import org.woehlke.computer.kurzweil.turmite.model.ApplicationModel;
-import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
+import org.woehlke.computer.kurzweil.turmite.model.TurmiteModel;
+import org.woehlke.computer.kurzweil.turmite.view.TurmiteFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,10 +17,10 @@ public class PanelButtons extends JPanel implements ActionListener {
     private volatile JButton buttonsRunA;
     private volatile JButton buttonsRunB;
     private volatile JButton buttonsRunC;
-    private final ApplicationFrame tab;
-    private final ApplicationModel model;
+    private final TurmiteFrame tab;
+    private final TurmiteModel model;
 
-    public PanelButtons(ApplicationModel model, ApplicationFrame tab, ComputerKurzweilProperties config ) {
+    public PanelButtons(TurmiteModel model, TurmiteFrame tab, ComputerKurzweilProperties config ) {
         this.tab = tab;
         this.model = model;
         this.copyright = new JLabel(config.getTurmite().getView().getCopyright());

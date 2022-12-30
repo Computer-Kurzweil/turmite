@@ -1,6 +1,6 @@
 package org.woehlke.computer.kurzweil.turmite.model.fractal;
 
-import org.woehlke.computer.kurzweil.turmite.model.ApplicationModel;
+import org.woehlke.computer.kurzweil.turmite.model.TurmiteModel;
 import org.woehlke.computer.kurzweil.turmite.model.common.Point;
 
 
@@ -37,7 +37,7 @@ public class GaussianNumberPlane {
     private volatile ComplexNumber complexCenterForMandelbrot;
     private volatile ComplexNumber complexCenterForJulia;
 
-    public GaussianNumberPlane(ApplicationModel model) {
+    public GaussianNumberPlane(TurmiteModel model) {
         this.worldDimensions = model.getWorldDimensions();
         this.lattice = new int[worldDimensions.getWidth()][worldDimensions.getHeight()];
         this.complexWorldDimensions = new ComplexNumber(

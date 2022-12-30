@@ -1,8 +1,8 @@
 package org.woehlke.computer.kurzweil.turmite.control;
 
 import lombok.extern.slf4j.Slf4j;
-import org.woehlke.computer.kurzweil.turmite.model.ApplicationModel;
-import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
+import org.woehlke.computer.kurzweil.turmite.model.TurmiteModel;
+import org.woehlke.computer.kurzweil.turmite.view.TurmiteFrame;
 
 /**
  * Mandelbrot Set drawn by a Turing Machine.
@@ -13,8 +13,8 @@ import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
  * @see <a href="https://github.com/Computer-Kurzweil/mandelbrot-julia">Github Repository</a>
  * @see <a href="https://java.woehlke.org/mandelbrot-julia/">Maven Project Repository</a>
  *
- * @see ApplicationModel
- * @see ApplicationFrame
+ * @see TurmiteModel
+ * @see TurmiteFrame
  *
  * @see Thread
  * @see Runnable
@@ -25,13 +25,13 @@ import org.woehlke.computer.kurzweil.turmite.view.ApplicationFrame;
 @Slf4j
 public class ControllerThread extends Thread implements Runnable {
 
-    private volatile ApplicationModel model;
-    private volatile ApplicationFrame frame;
+    private volatile TurmiteModel model;
+    private volatile TurmiteFrame frame;
 
     private volatile Boolean goOn;
     private final int threadSsleepTime;
 
-    public ControllerThread(ApplicationModel model, ApplicationFrame frame) {
+    public ControllerThread(TurmiteModel model, TurmiteFrame frame) {
         this.frame = frame;
         this.model = model;
         this.goOn = Boolean.TRUE;
