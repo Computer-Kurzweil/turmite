@@ -32,6 +32,11 @@
       <option name="url" value="http://localhost:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="libs-release-local-woehlke-org" />
+      <option name="name" value="woehlke.org" />
+      <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jcenter" />
       <option name="name" value="JCenter Repository" />
       <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
@@ -62,24 +67,24 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="jcenter" />
-      <option name="name" value="JCenter Repository" />
-      <option name="url" value="http://localhost:8081/artifactory/libs-release" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="springio-plugins-release" />
       <option name="name" value="Spring Plugins Repository" />
       <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="jboss-ea" />
-      <option name="name" value="JBossEA Repository" />
+      <option name="id" value="jcenter" />
+      <option name="name" value="JCenter Repository" />
       <option name="url" value="http://localhost:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="springio-libs-release" />
       <option name="name" value="Spring Lib Release Repository" />
       <option name="url" value="http://tw-thinkpad:8081/artifactory/libs-release" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss-ea" />
+      <option name="name" value="JBossEA Repository" />
+      <option name="url" value="http://localhost:8081/artifactory/libs-release" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="jboss-releases" />
