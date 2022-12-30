@@ -25,8 +25,8 @@ public class PanelButtons extends JPanel implements ActionListener {
         this.model = model;
         this.copyright = new JLabel(config.getTurmite().getView().getCopyright());
         this.buttonsRunA = new JButton(config.getTurmite().getView().getButtonsRunA());
-        this.buttonsRunB = new JButton(config.getTurmite().getView().getButtonsRunA());
-        this.buttonsRunC = new JButton(config.getTurmite().getView().getButtonsRunA());
+        this.buttonsRunB = new JButton(config.getTurmite().getView().getButtonsRunB());
+        this.buttonsRunC = new JButton(config.getTurmite().getView().getButtonsRunC());
         int hgap = 16;
         int vgap = 2;
         this.copyright.setLayout(new FlowLayout( FlowLayout.RIGHT, hgap, vgap));
