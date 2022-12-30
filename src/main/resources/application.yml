@@ -43,9 +43,6 @@ simulatedevolution:
     width: 320
     height: 234
     scale: 3
-    buttonsRunA: "run A"
-    buttonsRunB: "run B"
-    buttonsRunC: "run C"
   control:
     threadSleepTime: 100
     exitStatus: 0
@@ -164,6 +161,9 @@ turmite:
     width: 400
     height: 292
     scale: 3
+    buttonsRunA: "Run A"
+    buttonsRunB: "Run B"
+    buttonsRunC: "Run C"
   control:
     threadSleepTime: 50
 wator:
