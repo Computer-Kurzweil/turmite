@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.woehlke.computer.kurzweil</groupId>
         <artifactId>computer-kurzweil-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </parent>
 
     <artifactId>turmite</artifactId>
@@ -14,7 +14,7 @@
 
     <name>Turmite</name>
     <description>Artificial Life Simulation of Bacteria Motion depending on DNA</description>
-    <url>https://java.woehlke.org/turmite/</url>
+    <url>https://java.woehlke.org/kurzweil/turmite/</url>
     <inceptionYear>2013</inceptionYear>
 
     <scm>
@@ -32,7 +32,7 @@
     <distributionManagement>
         <site>
             <id>turmite.local</id>
-            <url>file://${user.home}/public_html/java/turmite/</url>
+            <url>file://${user.home}/public_html/java/kurzweil/turmite/</url>
         </site>
         <snapshotRepository>
             <id>snapshots</id>
