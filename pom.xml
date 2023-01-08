@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>turmite</artifactId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
     <name>Turmite</name>
@@ -21,7 +21,7 @@
         <connection>scm:git:git@github.com:Computer-Kurzweil/turmite.git</connection>
         <developerConnection>scm:git:git@github.com:Computer-Kurzweil/turmite.git</developerConnection>
         <url>https://github.com/Computer-Kurzweil/turmite/tree/${project.scm.tag}</url>
-        <tag>HEAD</tag>
+        <tag>turmite-1.0.2</tag>
     </scm>
 
     <issueManagement>
@@ -58,20 +58,20 @@
             <id>Central</id>
             <name>Central Repository</name>
             <url>https://repo1.maven.org/maven2/</url>
-            <releases></releases>
-            <snapshots></snapshots>
+            <releases />
+            <snapshots />
         </repository>
         <repository>
             <id>repository.woehlke.org-releases</id>
             <name>woehlke.org Releases Repository</name>
             <url>https://repository.woehlke.org/releases/</url>
-            <releases></releases>
+            <releases />
         </repository>
         <repository>
             <id>repository.woehlke.org-snapshots</id>
             <name>woehlke.org Snapshots Repository</name>
             <url>https://repository.woehlke.org/snapshots/</url>
-            <snapshots></snapshots>
+            <snapshots />
         </repository>
     </repositories>
 
